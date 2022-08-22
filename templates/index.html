@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>RecSys</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">H&M RecSys</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="#">Home</a></li>
+      <li><a href="#">About Project</a></li>
+      <li><a href="#">Contact us</a></li>
+    </ul>
+  </div>
+</nav>
+</br>
+</br>
+<div class="container">
+  <h3>H&M Personalized Product Recommendation System</h3>
+  <p>In this project, I have build a H&M personalized product recommendation system using model of cosine similarity</p>
+</div>
+</br>
+<div class ="container">
+    <form action="/result" method="post">
+  <div class="mb-3 mt-3">
+    <label for="email" class="form-label">Product Article ID:</label>
+
+    <input type="number" class="form-control" id="email" placeholder="Enter Product Article ID" name="articleID">
+  </div>
+        </br>
+  <button type="submit" class="btn btn-primary">Recommend</button>
+  </form>
+</div>
+</body>
+</html>
