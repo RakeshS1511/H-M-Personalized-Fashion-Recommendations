@@ -11,8 +11,7 @@ We were given three datasets + 1 collection of image data.
 The datasets consist of 106k products and 1.37m customers. If we included all products as candidates per customer, we’ll have 106k X 1.37mn =145 billion rows of data, not to mention the size of the features. We need to find a better way to reduce the data or we can’t fit the data into RAM.
 
 One great analysis from Kaggler here helps us to focus on only relevant products for customers. Shown number of article count per week group by the last time it’s been bought before this week. The majority of transactions made by articles that's still been bought last 1 week. From this, we decide to only use articles that's still been bought last 6 weeks as candidates. Later we’ll filter these candidates again to reduce the number of candidates per customer.
-![image](https://user-images.githubusercontent.com/108456495/185996726-0a1ff8c5-7607-4d6b-a850-826bbc90499d.png)
-## The Solution
+
 Our solution was inspired by famous two steps architecture: (1) Candidate Retrieval and (2) Ranking. Candidate Retrieval focuses more on recall means that it aims to filter 106k products to 30 that are relevant for customers. Ranking focuses more on precision means that it aims to correct the order of 30 candidates and select only top 12 products.
 ![image](https://user-images.githubusercontent.com/108456495/185996878-cd8a84e2-e8d7-4fc5-a3e1-70fdf29d042f.png)
 ## Candidate Retrieval (Recall)
